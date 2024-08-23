@@ -6,6 +6,7 @@ import {
   FaInstagram,
   FaWhatsapp,
 } from "react-icons/fa";
+//nuevo
 
 const ContactCTA: React.FC = () => {
   return (
