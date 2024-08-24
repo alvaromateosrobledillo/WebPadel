@@ -1,5 +1,6 @@
 import React from "react";
 import { FaUser, FaUsers, FaUserFriends, FaPeopleArrows } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 interface PricingCardProps {
   title: string;
@@ -22,9 +23,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
         {icon}
         <h3 className="text-2xl font-bold ml-4">{title}</h3>
       </div>
-      <p className="text-4xl font-extrabold mb-4 text-verdeBosque dark:text-verdeBosque">
-        {price}
-      </p>
+      <p className="text-4xl font-extrabold mb-4 text-verdeBosque">{price}</p>
       <p className="mb-4 text-gray-700 dark:text-gray-300">{description}</p>
       <ul className="mb-4 space-y-2">
         {features.map((feature) => (
@@ -36,16 +35,22 @@ const PricingCard: React.FC<PricingCardProps> = ({
           </li>
         ))}
       </ul>
-      <button className="bg-verdeBosque text-white py-2 px-4 rounded-full transition-transform duration-300 transform hover:scale-110 hover:bg-azulOscuro hover:shadow-lg">
+      <motion.button
+        whileHover={{
+          scale: 1.1,
+          boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
+        }}
+        className="bg-verdeBosque text-white py-2 px-4 rounded-full transition-transform duration-300 transform hover:scale-110 hover:bg-azulOscuro hover:shadow-lg"
+      >
         Reservar
-      </button>
+      </motion.button>
     </div>
   );
 };
 
 const PricingPage: React.FC = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-grisClaro via-blancoPuro to-verdeBosque dark:from-azulOscuro dark:via-azulOscuro dark:to-grisClaro">
+    <section className="py-16 bg-gradient-to-br from-grisClaro via-blancoPuro to-verdeBosque dark:from-azulOscuro dark:via-azulOscuro dark:to-grisClaro  ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold mb-12 text-center text-azulOscuro dark:text-blancoPuro shadow-md dark:shadow-blancoPuro">
           Tarifas de Entrenamiento

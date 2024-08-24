@@ -5,7 +5,7 @@ import {
   CogIcon,
   CalendarIcon,
   NewspaperIcon,
-  PhoneIcon,
+  PhoneIcon, // Puedes usar este icono para WhatsApp o cualquier otro de Heroicons
 } from "@heroicons/react/24/outline";
 import ThemeToggle from "./ThemeToggle.jsx";
 
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
         <nav className="hidden md:flex space-x-6 lg:space-x-8">
           {navItems.map((link, index) => (
             <a
-              key={index} // Mejora: Usa un identificador único en lugar del índice
+              key={index}
               className="text-md lg:text-lg font-medium text-gray-700 dark:text-gray-200 relative group transition-all duration-300 hover:text-verdeBosque flex items-center"
               href={link.url}
             >
@@ -115,7 +115,7 @@ const Header: React.FC = () => {
           <nav className="w-full flex flex-col items-center space-y-6">
             {navItems.map((item, index) => (
               <a
-                key={index} // Mejora: Usa un identificador único en lugar del índice
+                key={index}
                 href={item.url}
                 className="w-full flex items-center justify-center text-gray-700 dark:text-gray-200 hover:text-verdeBosque transition duration-300 py-4 text-lg uppercase transform hover:scale-105"
                 onClick={() => setMenuOpen(false)}
@@ -131,24 +131,20 @@ const Header: React.FC = () => {
               </a>
             ))}
 
-            <a
-              href="#contacto"
-              className="inline-block bg-gradient-to-r from-azulOscuro to-verdeBosque text-white py-3 px-8 rounded-full text-lg font-medium transition-transform duration-300 hover:scale-105 mt-8"
-              onClick={() => setMenuOpen(false)}
-            >
-              Solicita Estudio
-            </a>
-
-            <motion.button
+            {/* Botón para Contacto por WhatsApp */}
+            <motion.a
               whileHover={{
                 scale: 1.1,
                 boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
               }}
-              className="w-full max-w-xs flex items-center justify-center bg-gradient-to-r from-azulOscuro to-verdeBosque text-white font-bold py-3 mt-4 rounded-full transition duration-300 hover:scale-105 animate-pulse"
+              href="https://wa.me/34687854801?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20tus%20servicios."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-gradient-to-r from-azulOscuro to-verdeBosque text-white py-3 px-8 rounded-full text-lg font-medium transition-transform duration-300 hover:scale-105 mt-8 animate-pulse"
               onClick={() => setMenuOpen(false)}
             >
-              INICIAR SESIÓN
-            </motion.button>
+              Ponte en Contacto Conmigo
+            </motion.a>
           </nav>
         </motion.div>
       )}

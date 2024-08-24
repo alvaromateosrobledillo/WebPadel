@@ -4,7 +4,8 @@ import {
   FaChalkboardTeacher,
   FaGlobe,
   FaCalendarAlt,
-} from "react-icons/fa"; // Importación desde react-icons
+} from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const ServicesSection: React.FC = () => {
   const services = [
@@ -44,20 +45,18 @@ const ServicesSection: React.FC = () => {
 
   return (
     <section
-      className="relative py-16 bg-cover bg-center bg-no-repeat"
+      className="relative py-16 bg-cover bg-center bg-no-repeat "
       style={{
-        backgroundImage: `url('/imagen_fondo.jpg')`, // Reemplaza con la ruta de tu imagen
-        backgroundPosition: "center center", // Centra la imagen en ambas direcciones
-        backgroundSize: "cover", // Asegura que la imagen cubra todo el contenedor
-        backgroundAttachment: "fixed", // Hace que la imagen se mantenga fija mientras se desplaza (efecto parallax)      }}
+        backgroundImage: `url('/imagen_fondo.jpg')`,
+        backgroundPosition: "center center",
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
       }}
     >
-      {/* Superposición de color para mejorar legibilidad */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        {/* Sección de Servicios */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-blancoPuro mb-12 text-center">
           SERVICIOS DE ENTRENAMIENTO DE PÁDEL
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-16">
@@ -79,24 +78,27 @@ const ServicesSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Sección de Llamada a la Acción */}
         <div className="fade-in max-w-xl mx-auto p-6 md:p-8 bg-white rounded-lg shadow-lg transform transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 tracking-wide">
-            <span className="text-blue-500">¿QUIERES MEJORAR</span> TU TÉCNICA
-            EN EL PÁDEL?
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-azulOscuro tracking-wide">
+            <span className="text-verdeBosque">¿QUIERES MEJORAR</span> TU
+            TÉCNICA EN EL PÁDEL?
           </h2>
           <p className="text-base md:text-lg mb-8 text-gray-700">
-            Solicita una consulta gratuita con nuestro equipo de entrenadores y
-            descubre cómo{" "}
-            <span className="font-semibold text-blue-500">PERFECCIONAR</span> tu
-            juego.
+            Solicita una consulta conmigo y descubre cómo{" "}
+            <span className="font-semibold text-verdeBosque">PERFECCIONAR</span>{" "}
+            tu juego.
           </p>
-          <a
-            href="mailto:info@padelentrenador.com"
-            className="mt-4 md:mt-8 inline-block bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 px-6 rounded-full font-semibold transition-transform duration-300 hover:scale-105 hover:bg-cyan-600 shadow-md hover:shadow-lg"
+          <motion.a
+            whileHover={{
+              scale: 1.05,
+            }}
+            href="https://wa.me/34687854801?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20tus%20servicios."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 md:mt-8 inline-block bg-gradient-to-r from-azulOscuro to-verdeBosque text-white py-3 px-6 rounded-full font-semibold transition-transform duration-300 hover:scale-105 shadow-md hover:shadow-lg"
           >
             SOLICITA UNA CONSULTA
-          </a>
+          </motion.a>
         </div>
       </div>
     </section>

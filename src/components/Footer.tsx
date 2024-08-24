@@ -10,14 +10,12 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-azulOscuro text-blancoPuro py-8">
       <div className="container mx-auto text-center space-y-4">
-        {/* Logo */}
         <img
           src="/logo.png" // Ruta a tu logo
           alt="Logo"
           className="mx-auto h-12"
         />
 
-        {/* Navegación */}
         <nav className="flex justify-center space-x-6">
           <a href="/" className="hover:text-verdeBosque transition-colors">
             INICIO
@@ -42,28 +40,25 @@ const Footer: React.FC = () => {
           </a>
         </nav>
 
-        {/* Información de contacto */}
         <div className="text-sm space-y-2">
           <p>
-            <strong>Teléfono:</strong> +34 123 456 789 (WhatsApp)
+            <strong>Teléfono:</strong> +34 687 854 801 (WhatsApp)
           </p>
           <p>
             <strong>Email:</strong>{" "}
             <a
-              href="mailto:contacto@tudominio.com"
+              href="mailto:alvaromar988@gmail.com"
               className="hover:text-verdeBosque transition-colors"
             >
-              contacto@tudominio.com
+              alvaromar988@gmail.com
             </a>
           </p>
         </div>
 
-        {/* Dirección */}
         <address className="not-italic text-sm space-y-2">
-          <p>Ubicación: Calle Ejemplo, 123, 28001 Madrid, ES</p>
+          <p>Ubicación: Calle San Manuel, 1, 28011 Madrid, ES</p>
         </address>
 
-        {/* Enlaces Legales */}
         <div className="text-sm space-y-2">
           <a
             href="/aviso-legal"
@@ -87,12 +82,10 @@ const Footer: React.FC = () => {
           </a>
         </div>
 
-        {/* Derechos reservados */}
         <p className="text-xs">
           &copy; 2024 Tu Nombre o Empresa. Todos los derechos reservados.
         </p>
 
-        {/* Redes Sociales */}
         <div className="flex justify-center space-x-4 mt-4">
           <a
             href="#"
