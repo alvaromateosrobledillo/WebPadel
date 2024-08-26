@@ -63,7 +63,7 @@ const AboutMe: React.FC = () => {
             height="200"
             src="/jugando.jpg"
             alt={personalImageAlt}
-            className="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-verdeBosque ring-2 ring-verdeBosque shadow-lg transform transition-transform duration-300 hover:scale-105 hover:rotate-0"
+            className="object-cover w-64 h-full p-1 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-verdeBosque ring-2 ring-verdeBosque shadow-lg transform transition-transform duration-300 hover:scale-105 hover:rotate-0"
           />
         </motion.div>
       </div>
@@ -87,7 +87,7 @@ const AboutMe: React.FC = () => {
           href="https://instagram.com/tu_perfil"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-pink-400 hover:text-verdeBosque transition-transform duration-300 transform hover:scale-110"
+          className="text-blancoPuro hover:text-verdeBosque transition-transform duration-300 transform hover:scale-110"
         >
           <FaInstagram size={30} />
         </a>

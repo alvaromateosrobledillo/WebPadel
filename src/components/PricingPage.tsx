@@ -29,7 +29,9 @@ const PricingCard: React.FC<PricingCardProps> = ({
     <div className="flex items-center justify-center mb-4 text-azulOscuro dark:text-blancoPuro">
       {icon}
     </div>
-    <h3 className="text-2xl font-bold text-center mb-4">{title}</h3>
+    <h3 className="text-2xl font-bold text-center mb-4 text-azulOscuro dark:text-blancoPuro">
+      {title}
+    </h3>
     <p className="text-4xl font-extrabold text-center mb-4 text-verdeBosque">
       {price}
     </p>
@@ -108,10 +110,10 @@ const services = [
 
 const PricingPage: React.FC = () => {
   return (
-    <section id="reserva" className=" py-16 bg-verdeBosque">
+    <section id="reserva" className="py-16 bg-verdeBosque">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
-          className="text-4xl font-bold mb-12 text-center text-azulOscuro dark:text-blancoPuro"
+          className="text-4xl font-bold mb-12 text-center text-blancoPuro dark:text-blancoPuro"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
