@@ -1,19 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-interface HeroSectionProps {
-  className?: string;
-}
-
-const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
+const HeroSection = () => {
   return (
-    <section
-      id="inicio"
-      className={`relative h-screen overflow-hidden ${className}`}
-    >
+    <section id="inicio" className="relative h-screen overflow-hidden">
+      {/* Video de fondo */}
       <video
-        id="backgroundVideo"
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 w-full h-full object-cover z-0 opacity-70" // Ajusta la opacidad del video
         autoPlay
         loop
         muted
@@ -32,62 +25,56 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
         />
         Tu navegador no soporta el video en HTML5.
       </video>
+      {/* Gradiente para oscurecer el video */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent z-10" />{" "}
+      {/* Opacidad incrementada */}
+      {/* Contenido del Hero */}
+      <div className="relative z-30 flex flex-col justify-center items-center h-full text-center text-white">
+        <motion.h1
+          className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 font-title"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <span className="text-verdeBosque">CLASES DE PÁDEL</span> EN MADRID
+        </motion.h1>
 
-      <div
-        id="foregroundLayer"
-        className="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent z-5"
-      />
+        <motion.p
+          className="text-lg sm:text-xl md:text-2xl mb-8 font-sans"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          Mejora tu juego con entrenadores expertos y una metodología
+          comprobada.
+        </motion.p>
 
-      <div
-        id="heroContent"
-        className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 z-10 transition-transform duration-300"
-      >
-        <div className="max-w-3xl mx-auto p-8 rounded-lg bg-black bg-opacity-60 backdrop-blur-lg shadow-lg">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-wide font-title text-verdeBosque shadow-lg">
-            <span>CLASES DE PÁDEL</span> EN MADRID
-          </h1>
-          <p className="text-lg md:text-2xl mb-6 text-grisClaro font-sans">
-            Mejora tu juego con entrenadores expertos y una metodología
-            comprobada.
-          </p>
-          <p className="text-base md:text-xl mb-8 text-grisClaro font-sans">
-            Clases particulares, en grupo, y entrenamientos para todas las
-            edades y niveles.
-          </p>
-          <motion.a
-            whileHover={{
-              scale: 1.05,
-            }}
-            href="https://wa.me/34687854801?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20tus%20servicios."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-gradient-to-r from-azulOscuro to-verdeBosque text-blancoPuro py-3 px-8 rounded-full text-lg font-medium transition-transform duration-300"
-          >
-            Ponte en Contacto Conmigo
-          </motion.a>
-        </div>
+        <motion.p
+          className="text-base sm:text-lg md:text-xl mb-8 font-sans"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+        >
+          Clases particulares, en grupo, y entrenamientos para todas las edades
+          y niveles.
+        </motion.p>
+
+        <motion.a
+          href="https://wa.me/34687854801?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20tus%20servicios."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-gradient-to-r from-azulOscuro to-verdeBosque text-blancoPuro py-3 px-8 rounded-full text-lg font-medium transition-transform duration-300"
+          whileHover={{ scale: 1.05 }}
+        >
+          Ponte en Contacto Conmigo
+        </motion.a>
       </div>
-
-      <div className="absolute inset-x-0 bottom-10 text-white flex justify-center items-center z-10 md:hidden">
+      {/* Indicador de desplazamiento */}
+      <div className="absolute bottom-6 inset-x-0 text-center text-white flex justify-center items-center z-30">
         <a href="#servicios" className="flex flex-col items-center">
-          <div className="animate-bounce">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="w-10 h-10"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 4v8m4 4H8"
-              />
-            </svg>
-          </div>
-          <span className="mt-2 text-sm font-semibold tracking-wide">
-            Desplazar
+          <div className="animate-bounce text-3xl sm:text-4xl">↓</div>
+          <span className="mt-2 text-xs sm:text-sm font-medium tracking-wide">
+            Desplázate hacia abajo
           </span>
         </a>
       </div>

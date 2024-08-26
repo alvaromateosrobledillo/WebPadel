@@ -10,11 +10,11 @@ import Page from '@/components/Page';
 ---
 <Layout title="Energía Solar La Martina" description="Instalación de placas solares en Castellón de la Plana.">
 
-    <HeroSection />
-
- <ServicesSection/> 
- <PricingPage/>
- <AboutMe/>
- <ContactCta/>
+    <HeroSection client:load />
+    <ServicesSection client:visible /> 
+    <PricingPage client:visible />
+    <AboutMe client:visible />
+    <ContactCta client:visible />
+    
 
 </Layout>

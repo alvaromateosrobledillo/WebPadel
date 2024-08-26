@@ -10,7 +10,11 @@ import {
 import ThemeToggle from "./ThemeToggle.jsx";
 
 const navItems = [
-  { title: "INICIO", url: "/", icon: <HomeIcon className="w-6 h-6 mr-2" /> },
+  {
+    title: "INICIO",
+    url: "/inicio",
+    icon: <HomeIcon className="w-6 h-6 mr-2" />,
+  },
   {
     title: "SERVICIOS",
     url: "/#servicios",
@@ -22,8 +26,8 @@ const navItems = [
     icon: <CalendarIcon className="w-6 h-6 mr-2" />,
   },
   {
-    title: "BLOG",
-    url: "/#blog",
+    title: "SOBRE MÍ",
+    url: "/#sobre",
     icon: <NewspaperIcon className="w-6 h-6 mr-2" />,
   },
   {
