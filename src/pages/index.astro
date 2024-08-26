@@ -6,12 +6,14 @@ import AboutMe from '@/components/AboutMe';
 import PricingPage from '@/components/PricingPage';
 import ContactCta from '@/components/ContactCta';
 import Page from '@/components/Page';
+import Header from "../components/Header"
 
 ---
-<Layout title="Energía Solar La Martina" description="Instalación de placas solares en Castellón de la Plana.">
-
-    <HeroSection client:load />
-    <ServicesSection client:visible /> 
+<Layout title="Clases de Pádel Profesionales en Madrid - [Tu Nombre o Nombre de la Academia]" 
+        description="Soy un profesor de pádel experimentado que ofrece clases en Madrid para todos los niveles. Desde principiantes hasta avanzados, mis clases están diseñadas para mejorar tu técnica y rendimiento en la pista. Clases disponibles en inglés y español, con flexibilidad horaria y ubicación. ¡Reserva tu clase y mejora tu juego hoy mismo!">
+    <Header client:load/>
+    <HeroSection client:visible />
+     <ServicesSection client:visible /> 
     <PricingPage client:visible />
     <AboutMe client:visible />
     <ContactCta client:visible />

@@ -108,10 +108,7 @@ const services = [
 
 const PricingPage: React.FC = () => {
   return (
-    <section
-      id="reserva"
-      className=" py-16 bg-gradient-to-br from-grisClaro via-blancoPuro to-verdeBosque dark:from-azulOscuro dark:via-azulOscuro dark:to-grisClaro"
-    >
+    <section id="reserva" className=" py-16 bg-verdeBosque">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
           className="text-4xl font-bold mb-12 text-center text-azulOscuro dark:text-blancoPuro"

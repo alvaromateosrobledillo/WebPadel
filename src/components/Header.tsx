@@ -11,26 +11,31 @@ import ThemeToggle from "./ThemeToggle.jsx";
 
 const navItems = [
   {
+    id: "inicio",
     title: "INICIO",
-    url: "/inicio",
+    url: "/",
     icon: <HomeIcon className="w-6 h-6 mr-2" />,
   },
   {
+    id: "servicios",
     title: "SERVICIOS",
     url: "/#servicios",
     icon: <CogIcon className="w-6 h-6 mr-2" />,
   },
   {
+    id: "reserva",
     title: "RESERVA",
     url: "/#reserva",
     icon: <CalendarIcon className="w-6 h-6 mr-2" />,
   },
   {
+    id: "sobre",
     title: "SOBRE MÍ",
     url: "/#sobre",
     icon: <NewspaperIcon className="w-6 h-6 mr-2" />,
   },
   {
+    id: "contacto",
     title: "CONTACTO",
     url: "/#contacto",
     icon: <PhoneIcon className="w-6 h-6 mr-2" />,
@@ -41,7 +46,7 @@ const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-30 w-full bg-white dark:bg-gray-900 shadow-md transition-colors duration-300">
+    <header className="fixed top-0 z-50 w-full bg-white dark:bg-gray-900 shadow-md transition-colors duration-300">
       <div className="container mx-auto flex justify-between items-center py-3 px-4 md:py-4 md:px-6">
         <a href="/" className="flex items-center">
           <img
@@ -52,9 +57,9 @@ const Header: React.FC = () => {
         </a>
 
         <nav className="hidden md:flex space-x-6 lg:space-x-8">
-          {navItems.map((link, index) => (
+          {navItems.map((link) => (
             <a
-              key={index}
+              key={link.id} // Usar id en lugar de index
               className="text-md lg:text-lg font-medium text-gray-700 dark:text-gray-200 relative group transition-all duration-300 hover:text-verdeBosque flex items-center"
               href={link.url}
             >
@@ -117,9 +122,9 @@ const Header: React.FC = () => {
           </button>
 
           <nav className="w-full flex flex-col items-center space-y-6">
-            {navItems.map((item, index) => (
+            {navItems.map((item) => (
               <a
-                key={index}
+                key={item.id} // Usar id en lugar de index
                 href={item.url}
                 className="w-full flex items-center justify-center text-gray-700 dark:text-gray-200 hover:text-verdeBosque transition duration-300 py-4 text-lg uppercase transform hover:scale-105"
                 onClick={() => setMenuOpen(false)}
