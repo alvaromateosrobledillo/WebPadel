@@ -19,7 +19,7 @@ const HeroSection = () => {
         <source src="/sm.mp4" type="video/mp4" media="(max-width: 768px)" />
         <source src="/md.mp4" type="video/mp4" media="(max-width: 1024px)" />
         <source
-          src="/lg.mov"
+          src="/md.mov"
           type="video/quicktime"
           media="(min-width: 1025px)"
         />
